@@ -371,6 +371,9 @@ th {
   margin-top: 0.1rem;
   font-size: 0.24rem;
 }
+.nav ul .item_hide {
+  display: none;
+}
 .recommend {
   background-color: #fff;
 }
@@ -420,7 +423,6 @@ th {
 }
 .recommend .content li.content_item .item_desc .desc_top .colff6c00 {
   color: #ff6c00;
-  padding-left: 0.1rem;
 }
 .recommend .content li.content_item .item_desc .desc_bottom {
   color: #a1a1a1;
