@@ -1,0 +1,24 @@
+//给每个屏幕都设置一个html的font-size
+//320 360 375 384 400 414 424 480 540 720 750
+
+.adapter(@pageWidth:320px) {
+  @media (min-width: @pageWidth) {
+    html {
+      font-size: round(@base/@designWidth * @pageWidth, 2);
+    }
+  }
+}
+
+.adapter(320px);
+.adapter(360px);
+.adapter(375px);
+.adapter(384px);
+.adapter(400px);
+.adapter(414px);
+.adapter(424px);
+.adapter(480px);
+.adapter(540px);
+.adapter(720px);
+.adapter(750px);
+
+

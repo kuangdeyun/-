@@ -1,2 +1,280 @@
 @import "base";
 @import "normalize";
+@import "vairable";
+@import "adapter";
+
+
+.mmb_container{
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  background-color: #f1f1f1;
+  margin: 0 auto;
+}
+
+.top{
+  height: 50rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1rem/@base solid @bdColor;
+  overflow: hidden;
+
+  .logo{
+    float: left;
+    padding: 12rem/@base;
+    img{
+      width: auto;   //表示宽度是可变的，浏览器会自动计算其宽度；
+      height: 25rem/@base;
+    }
+  }
+
+  .app{
+    float: right;
+    width: 48rem/@base;
+    height: 48rem/@base;
+    padding: 7rem/@base; 
+  }
+}
+
+
+.search{
+  width: 100%;
+  height: 50rem/@base;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 10rem/@base;
+
+  .input{
+    overflow: hidden;
+    margin: 10rem/@base;
+    height: 30rem/@base;
+    padding-right: 73rem/@base;
+
+    input{
+      width: 100%;
+      height: 30rem/@base;
+      line-height: 30rem/@base;
+      background-color: #f1f1f1;
+      border-radius: 15rem/@base;
+      text-indent: 20rem/@base;   //文字缩进
+      font-size: 14rem/@base;
+    }
+   
+  }
+
+  .button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 63rem/@base;
+    height: 30rem/@base;
+    margin: 10rem/@base;
+
+    input{
+      width: 100%;
+      height: 100%;
+      line-height: 30rem/@base;
+      border: none;
+      border-radius: 15rem/@base;
+      background-color: @mainColor;
+      text-align: center;
+      font-size: 16rem/@base;
+      color: #fff;
+      outline-style: none;  //去除点击时出现的外边框
+    }
+  }
+}
+
+
+.nav{
+
+  ul{
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: 5rem/@base;
+    padding: 10rem/@base 0;
+
+    .nav_item{
+      width: 25%;
+      float: left;
+      margin-top: 15rem/@base;
+
+
+      img{
+        width: 50rem/@base;
+        height: 50rem/@base;
+        margin: 0 auto;
+      }
+
+      p{
+        text-align: center;
+        margin-top: 5rem/@base;
+        font-size: 12rem/@base;
+      }
+    }
+  }
+}
+
+
+.recommend{
+  background-color: #fff;
+
+  .title{
+    height: 35rem/@base;
+    background-color: #ff9000;
+    background-image: -webkit-gradient(linear,0 0, 0 100%, from(#ffaf47), to(#ff9000));
+    position: relative;
+    padding-right: 30rem/@base;
+    border-bottom: 1rem/@base solid @bdColor;
+
+    p{
+      color: #fff;
+      height: 30rem/@base;
+      line-height: 30rem/@base;
+      padding-left: 10rem/@base;
+      font-size: 16rem/@base;
+    }
+
+    i{
+      background-image: url(../images/more.png);
+      width: 20rem/@base;
+      height: 20rem/@base;
+      position: absolute;
+      top: 7rem/@base;;
+      right: 7rem/@base;;
+      background-size: 20rem/@base 20rem/@base;
+    }
+  }
+
+
+  .content{
+    
+    li.content_item{
+      border-bottom: 1rem/@base solid #e7e7e7;
+      height: 129rem/@base;
+      padding: 14rem/@base 8rem/@base;
+
+
+      .item_img{
+        width: 100rem/@base;
+        height: 100rem/@base;
+        float: left;
+        margin-right: 10rem/@base;
+      }
+
+      .item_desc{
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+        .desc_top{
+          font-size: 15rem/@base;
+          color: #333;
+          .colff6c00 {
+            color: #ff6c00;
+            padding-left: 5rem/@base;
+          }
+        }
+
+        .desc_bottom{
+          color: #a1a1a1;
+          font-size: 12rem/@base;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  .more{
+    width: 100%;
+    height: 42rem/@base;
+    overflow: hidden;
+    padding: 10rem/@base 10rem/@base 0;
+
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 1rem/@base solid #ddd;
+      background-color: #f4f4f4;
+      background-image: linear-gradient(#ffffff, #f4f4f4);
+      text-align: center;
+      line-height: 30rem/@base;
+      font-size: 13rem/@base;
+    }
+  }
+}
+
+
+.brand{
+  height: 35rem/@base;
+  background-color: #ff9000;
+  background-image: -webkit-gradient(linear,0 0, 0 100%, from(#ffaf47), to(#ff9000));
+  position: relative;
+  padding-right: 30rem/@base;
+  border-bottom: 1rem/@base solid @bdColor;
+  margin-top: 10rem/@base;
+
+  p{
+    color: #fff;
+    height: 30rem/@base;
+    line-height: 30rem/@base;
+    padding-left: 10rem/@base;
+    font-size: 16rem/@base;
+  }
+
+  i{
+    background-image: url(../images/more.png);
+    width: 20rem/@base;
+    height: 20rem/@base;
+    position: absolute;
+    top: 7rem/@base;;
+    right: 7rem/@base;;
+    background-size: 20rem/@base 20rem/@base;
+  }
+}
+
+
+.footer{
+  margin-top: 20rem/@base;
+
+  .footer_top{
+    border-top: 1rem/@base solid #c4c4c4;
+    border-bottom: 1rem/@base solid #c4c4c4;
+    overflow: hidden;
+    text-align: center;
+
+    a{
+      display: block;
+      float: left;
+      width: 33.3%;
+      height: 34rem/@base;
+      line-height: 34rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+    }
+    .totop{
+      border-right: none;
+    }
+  }
+
+  .footer_bottom{
+   height: 62rem/@base;
+   font-size: 12rem/@base;
+   text-align: center;
+   padding: 15rem/@base 0;
+
+   .downApp{
+
+    .colred{
+      color: red;
+    }
+   }
+   
+   .col666{
+     color: #666;
+   }
+
+  }
+}
