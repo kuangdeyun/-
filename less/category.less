@@ -1,0 +1,177 @@
+@import "base";
+@import "normalize";
+@import "vairable";
+@import "adapter";
+
+
+.mmb_container{
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.top{
+  height: 50rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1rem/@base solid @bdColor;
+  overflow: hidden;
+
+  .logo{
+    float: left;
+    padding: 12rem/@base;
+    img{
+      width: auto;   //表示宽度是可变的，浏览器会自动计算其宽度；
+      height: 25rem/@base;
+    }
+  }
+
+  .app{
+    float: right;
+    width: 48rem/@base;
+    height: 48rem/@base;
+    padding: 7rem/@base; 
+  }
+}
+
+
+.search{
+  width: 100%;
+  height: 50rem/@base;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  
+  .input{
+    overflow: hidden;
+    margin: 10rem/@base;
+    height: 30rem/@base;
+    padding-right: 73rem/@base;
+
+    input{
+      width: 100%;
+      height: 30rem/@base;
+      line-height: 30rem/@base;
+      background-color: #f1f1f1;
+      border-radius: 15rem/@base;
+      text-indent: 20rem/@base;   //文字缩进
+      font-size: 14rem/@base;
+    }
+   
+  }
+
+  .button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 63rem/@base;
+    height: 30rem/@base;
+    margin: 10rem/@base;
+
+    input{
+      width: 100%;
+      height: 100%;
+      line-height: 30rem/@base;
+      border: none;
+      border-radius: 15rem/@base;
+      background-color: @mainColor;
+      text-align: center;
+      font-size: 16rem/@base;
+      color: #fff;
+      outline-style: none;  //去除点击时出现的外边框
+    }
+  }
+}
+
+.footer{
+  margin-top: 20rem/@base;
+
+  .footer_top{
+    border-top: 1rem/@base solid #c4c4c4;
+    border-bottom: 1rem/@base solid #c4c4c4;
+    overflow: hidden;
+    text-align: center;
+
+    a{
+      display: block;
+      float: left;
+      width: 33.3%;
+      height: 34rem/@base;
+      line-height: 34rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+    }
+    .totop{
+      border-right: none;
+    }
+  }
+
+  .footer_bottom{
+   height: 62rem/@base;
+   font-size: 12rem/@base;
+   text-align: center;
+   padding: 15rem/@base 0;
+
+   .downApp{
+
+    .colred{
+      color: red;
+    }
+   }
+   
+   .col666{
+     color: #666;
+   }
+
+  }
+}
+
+
+.category{
+  
+  overflow: hidden;
+  background-color: #ededed;
+  border-top: 1rem/@base solid #ccc;
+  border-bottom: 1rem/@base solid #ccc;
+  border-radius: 7rem/@base;
+  // height: 1000px;
+
+  .itemBox{
+    .item>a{
+      display: block;
+      height: 40rem/@base;
+      line-height: 40rem/@base;
+      border-bottom: 1rem/@base solid #ccc;
+      font-size: 16rem/@base;
+      font-weight: 700;
+      padding-left: 16rem/@base;
+    }
+
+    .subBox{
+      background-color: #f9f9f9;
+      overflow: hidden;
+      display: none;
+
+      .subItem{
+        float: left;
+        width: 33.3%;
+        height: 40rem/@base;
+        line-height: 40rem/@base;
+        text-align: center;
+        border-right: 1rem/@base solid #ccc;
+        border-bottom: 1rem/@base solid #ccc;
+        font-size: 14rem/@base;
+        color: #333;
+        a{
+          display: block;
+        }
+
+        
+      }
+
+      .subItem:nth-child(3n){
+        border-right: none;
+      }
+    }
+  }
+}
