@@ -16,7 +16,7 @@ $(function(){
       //    ???
       var $item_hide = $(".nav .nav_item.item_more ~ .nav_item");
       $item_more.on("click" , function(){
-        $item_hide.toggleClass("item_hide");
+        $item_hide.stop().toggleClass("item_hide");
         // toggleClass() 方法对添加和移除被选元素的一个或多个类进行切换。
         // 该方法检查每个元素中指定的类。如果不存在则添加类，如果已设置则删除之。这就是所谓的切换效果。
       })

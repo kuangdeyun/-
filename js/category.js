@@ -31,7 +31,7 @@ $(function(){
             var htmlStr = template("item_tpl" , info);
             //  console.log($that.next());   //  ul.subBox
             $that.next().html( htmlStr );
-            $that.next().slideToggle();
+            $that.next().stop().slideToggle();
 
             // $(selector).slideToggle(speed,callback);
             // slideToggle() 方法可以在 slideDown() 与 slideUp() 方法之间进行切换
