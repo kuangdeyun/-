@@ -1,0 +1,248 @@
+@import "base";
+@import "normalize";
+@import "vairable";
+@import "adapter";
+
+
+a:link,
+a:visited,
+a:hover,
+a:active{
+  color: #333;
+  text-decoration: none;
+}
+
+
+.mmb_container{
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.top{
+  height: 50rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1rem/@base solid @bdColor;
+  overflow: hidden;
+
+  .logo{
+    float: left;
+    padding: 12rem/@base;
+    img{
+      width: auto;   //表示宽度是可变的，浏览器会自动计算其宽度；
+      height: 25rem/@base;
+    }
+  }
+
+  .app{
+    float: right;
+    width: 48rem/@base;
+    height: 48rem/@base;
+    padding: 7rem/@base; 
+  }
+}
+
+.search{
+  width: 100%;
+  height: 50rem/@base;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+
+  .input{
+    overflow: hidden;
+    margin: 10rem/@base;
+    height: 30rem/@base;
+    padding-right: 73rem/@base;
+
+    input{
+      width: 100%;
+      height: 30rem/@base;
+      line-height: 30rem/@base;
+      background-color: #f1f1f1;
+      border-radius: 15rem/@base;
+      text-indent: 20rem/@base;   //文字缩进
+      font-size: 14rem/@base;
+    }
+   
+  }
+
+  .button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 63rem/@base;
+    height: 30rem/@base;
+    margin: 10rem/@base;
+
+    input{
+      width: 100%;
+      height: 100%;
+      line-height: 30rem/@base;
+      border: none;
+      border-radius: 15rem/@base;
+      background-color: @mainColor;
+      text-align: center;
+      font-size: 16rem/@base;
+      color: #fff;
+      outline-style: none;  //去除点击时出现的外边框
+    }
+  }
+}
+
+
+.pages{
+  height: 38rem/@base;
+  margin-top: 10rem/@base;
+
+  >div{
+    width: 33.3%;
+    text-align: center;
+  
+  }
+
+  button{
+    width: 80rem/@base;
+    height: 33rem/@base;
+  }
+
+  .btn{
+    padding: 0;
+    border-radius: 0;
+  }
+  .dropdown-menu{
+    min-width:80rem/@base;
+    text-align: center;
+    font-size: 14rem/@base;
+    margin: 0;
+
+    li{
+      height: 33rem/@base;
+      line-height: 33rem/@base;
+    }
+  }
+}
+
+.footer{
+  margin-top: 8rem/@base;
+
+  .footer_top{
+    border-top: 1rem/@base solid #c4c4c4;
+    border-bottom: 1rem/@base solid #c4c4c4;
+    overflow: hidden;
+    text-align: center;
+
+    a{
+      display: block;
+      float: left;
+      width: 33.3%;
+      height: 34rem/@base;
+      line-height: 34rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+    }
+    .totop{
+      border-right: none;
+    }
+  }
+
+  .footer_bottom{
+   height: 62rem/@base;
+   font-size: 12rem/@base;
+   text-align: center;
+   padding: 15rem/@base 0;
+
+   .downApp{
+
+    .colred{
+      color: red;
+    }
+   }
+   
+   .col666{
+     color: #666;
+   }
+
+  }
+}
+
+
+.product{
+  .title{
+    width: 100%;
+    height: 38rem/@base;
+    background-image: linear-gradient(to bottom, #fff, #ebebeb);
+    position: relative;line-height: 38rem/@base;
+    padding-left: 10rem/@base; 
+
+    .select_btn{
+      position: absolute;
+      top: 3rem/@base;
+      right: 5rem/@base;
+      width: 60rem/@base;
+      height: 28rem/@base;
+      line-height: 28rem/@base;
+      background-image: linear-gradient(to bottom, #d7d7d7, #f5f5f5);
+      border: 1rem/@base solid #ccc;
+      border-radius: 8rem/@base;
+      box-shadow: 1rem/@base 1rem/@base #888;
+      outline-style: none;
+    }
+  }
+
+  .listBox{
+
+    .listItem{
+      height: 129rem/@base;
+      border-bottom: 1rem/@base solid #ccc;
+      padding: 14rem/@base 8rem/@base;
+
+      .right_img{
+          float: left;
+          margin-right: 10rem/@base;
+
+
+        img{
+          width: 100rem/@base;
+          height: 100rem/@base;
+        }
+      }
+
+      .left_desc{
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .desc_top{
+          color: #333;
+          overflow: hidden;
+          // 当对象内文本溢出时显示省略标记（...）
+          text-overflow: ellipsis;
+          -webkit-line-clamp:2; 
+          font-size: 14rem/@base;
+
+        }
+        .desc_down{
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          color: #a1a1a1;
+
+          .price{
+            color: #ea3900;
+            font-size: 18rem/@base;
+          }
+          span{
+            font-size: 14rem/@base;
+            margin-right: 5rem/@base;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+

@@ -1,5 +1,7 @@
 $(function(){
 
+  // pageid : 页数id   (Number) 不传默认返回第一页数据
+
   var pageid = 0;
   var totalPage;
   var $next = $(".recommend .pages .next");
@@ -60,11 +62,7 @@ $prev.on("click" , function(){
   render(pageid);
 })
 
-// 中间分页按钮
-$curr.on("click", function () {
-  $(this).find(".morePage").toggle();
 
-})
 
 $curr.on("click" , ".dropdown-menu li" , function(){
   pageid = $(this).index();

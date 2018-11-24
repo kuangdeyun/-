@@ -1,5 +1,5 @@
 // 获取地址栏参数, 返回为对象格式
-function getUrl( k ){
+function getUrl(){
   // 获取地址栏参数信息
   var str = location.search;
   // 对中文解码
@@ -17,6 +17,6 @@ function getUrl( k ){
     obj[ key ] = value;
   })
 
-   // 将需要获取的对应属性返回
-   return obj[ k ];
+   // 将需要获取的对象返回
+   return obj;
 }
