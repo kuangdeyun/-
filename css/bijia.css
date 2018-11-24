@@ -396,6 +396,9 @@ a:active {
   line-height: 0.76rem;
   padding-left: 0.2rem;
 }
+.product .title .three_nav {
+  height: 0.76rem;
+}
 .product .title .select_btn {
   position: absolute;
   top: 0.06rem;
@@ -465,43 +468,32 @@ a:active {
 .product .productBox .goshop {
   width: 100%;
   height: 1rem;
-  line-height: 1rem;
-  position: relative;
   border-bottom: 0.02rem solid #cccccc;
+  position: relative;
 }
-.product .productBox .goshop .left {
-  width: 60%;
+.product .productBox .goshop td {
   position: absolute;
-  left: 0.24rem;
-  top: 0;
 }
-.product .productBox .goshop .left img {
-  display: inline-block;
+.product .productBox .goshop td:nth-child(2) {
+  top: 0.3rem;
+  left: 0.7rem;
+}
+.product .productBox .goshop td:nth-child(4) {
+  top: 0.26rem;
+  right: 0.2rem;
+}
+.product .productBox .goshop .p_pic {
   width: 0.32rem;
   height: 0.32rem;
+  top: 0.34rem;
+  left: 0.2rem;
 }
-.product .productBox .goshop .left span {
-  margin-left: 0.14rem;
-}
-.product .productBox .goshop .right {
-  width: 40%;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.product .productBox .goshop .right .price {
+.product .productBox .goshop .red {
   color: #d10311;
-}
-.product .productBox .goshop .right button {
-  margin-left: 0.2rem;
-  width: 1.4rem;
-  height: 0.5rem;
-  line-height: 0.5rem;
-  border: none;
-  background-color: #ff5500;
-  border-radius: 0.2rem;
-  color: #fff;
-  outline-style: none;
+  font-size: 0.32rem;
+  position: absolute;
+  top: 0.3rem;
+  right: 1.8rem;
 }
 .product .productBox .bottom {
   height: 1.28rem;

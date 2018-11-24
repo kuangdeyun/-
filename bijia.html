@@ -72,14 +72,7 @@
             </div>
             
             <div class="goshop">
-              <div class="left">
-                <img src="./images/360.png" alt="">
-                <span>京东商城</span>
-              </div>
-              <div class="right">
-                <span class="price">￥1999.00</span>
-                <button>去购买</button>
-              </div>
+              <!-- 挖坑 -->
             </div>
     
             <div class="bottom">
@@ -98,20 +91,8 @@
           网友评价
         </div>
         <ul>
-          <li class="text_list">
-            <a href="#">
-              <div class="user">
-                <span class="fl">b***r</span>
-                <span class="fr">2016/10/1</span>
-              </div>
-              <div class="buyfrom">
-                  <span class="fr">购买自:京东商城</span>
-              </div>
-              <div class="text">
-                  使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线
-              </div>
-            </a>
-          </li>
+          
+          <!-- 挖坑  -->
           <li class="text_list">
             <a href="#">
               <div class="user">
@@ -154,6 +135,58 @@
 
   </div>
 
+  
+  <!--根据商品id获取商品信息 模板-->
+  <script type="text/html" id="getproduct_tpl">
+    {{ each result v i}}
+      <h3>{{v.productName}}</h3>
+      <div  class="imgBox">
+        {{@v.productImg}}
+        <button>收藏</button>
+      </div>
+    {{ /each }}
+  </script>
+
+  <!-- goshop 部分 模板 -->
+  <script type="text/html" id="goshop_tpl">
+    {{ each result v i}}
+      {{@v.bjShop}}
+    {{ /each}}
+  </script>
+
+
+  <!--根据分类id和商品id实现3级菜单-->
+  <script type="text/html" id="threenav_tpl">
+      
+      <a href="index.html">首页</a>
+      <span>></span>
+      <a href="category.html">{{category.category}}</a>
+      <span>></span>  
+      <a href="javascript:;">{{productName}}</a>
+      <span>></span>
+     
+  </script>
+
+
+  <!-- 根据商品id获取商品评论  模板 -->
+  <script type="text/html" id="text_tpl">
+    {{ each result v i}}
+      <li class="text_list">
+        <a href="#">
+          <div class="user">
+            <span class="fl">{{v.comName}}</span>
+            <span class="fr">{{v.comTime}}</span>
+          </div>
+          <div class="buyfrom">
+              <span class="fr">{{v.comFrom}}</span>
+          </div>
+          <div class="text">
+            {{v.comContent}}
+          </div>
+        </a>
+      </li>
+    {{/each}}
+  </script>
 
   
  

@@ -142,9 +142,13 @@ a:active{
     width: 100%;
     height: 38rem/@base;
     background-image: linear-gradient(to bottom, #fff, #ebebeb);
-    position: relative;line-height: 38rem/@base;
+    position: relative;
+    line-height: 38rem/@base;
     padding-left: 10rem/@base; 
   
+    .three_nav{
+      height: 38rem/@base;
+    }
     .select_btn{
       position: absolute;
       top: 3rem/@base;
@@ -227,51 +231,36 @@ a:active{
     .goshop{
       width: 100%;
       height: 50rem/@base;
-      line-height: 50rem/@base;
-      position: relative;
       border-bottom: 1rem/@base solid #ccc;
+      position: relative;
 
-      .left{
-        width: 60%;
+      td{
         position: absolute;
-        left: 12rem/@base;
-        top: 0;
-
-        img{
-          display: inline-block;
-          width: 16rem/@base;
-          height: 16rem/@base;
-        }
-
-        span{
-          margin-left: 7rem/@base;
-        }
-
-
+      }
+      td:nth-child(2){
+        top: 15rem/@base;
+        left: 35rem/@base;
+      }
+      td:nth-child(4){
+        top: 13rem/@base;
+        right: 10rem/@base;
       }
 
-      .right{
-        width: 40%;
-        position: absolute;
-        right: 0;
-        top: 0;
-
-        .price{
-          color: #d10311;
-        }
-
-        button{
-          margin-left: 10rem/@base;
-          width: 70rem/@base;
-          height: 25rem/@base;
-          line-height: 25rem/@base;
-          border: none;
-          background-color: #ff5500;
-          border-radius: 10rem/@base;
-          color: #fff;
-          outline-style: none;
-        }
+      .p_pic{
+        width: 16rem/@base;
+        height: 16rem/@base;
+        top: 17rem/@base;
+        left: 10rem/@base;
       }
+
+      .red{
+        color: #d10311;
+        font-size: 16rem/@base;
+        position: absolute;
+        top: 15rem/@base;
+        right: 90rem/@base;
+      }
+
     }
 
     .bottom{
