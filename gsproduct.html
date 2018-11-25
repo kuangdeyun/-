@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/gsproduct.css">
+  <title>凑单品</title>
+</head>
+
+<body>
+  <div class="mmb_container">
+
+    <!--  top 顶部栏 -->
+    <div class="top">
+      <a href="javascript:;" id="top" name="top"> </a>
+      <i class="back" onclick="javascript:history.back(-1)"> </i>
+      <h3>凑单品</h3>
+      <div class="app">
+        <img src="./images/header_app.png" alt="">
+      </div>
+
+    </div>
+
+
+    <!-- 筛选导航栏 -->
+    <div class="nav">
+
+      <ul class="navBox clearfix">
+        <li class="navItem">
+          <span>京东</span>
+          <i></i>
+        </li>
+        <li class="navItem">
+          <span>华北</span>
+          <i></i>
+        </li>
+        <li class="navItem">
+          <span>全部价格</span>
+          <i></i>
+        </li>
+      </ul>
+
+      <div class="search"></div>
+
+      <div class="select">
+        <ul class="shopBox">
+          <li class="shopItem">京东</li>
+          <li class="shopItem">一号店</li>
+          <li class="shopItem">天猫超市</li>
+        </ul>
+        <ul class="areaBox">
+          <li class="areaItem">华北（北京、山西等）</li>
+          <li class="areaItem">华东（山东、浙江等）</li>
+          <li class="areaItem">华南（广东、广西等）</li>
+          <li class="areaItem">华中（湖北、河南等）</li>
+          <li class="areaItem">西南（四川、云南等）</li>
+          <li class="areaItem">东北（辽宁、吉林等）</li>
+          <li class="areaItem">西北（宁夏、新疆等）</li>
+        </ul>
+        <ul class="priceBox">
+          <li class="priceItem">全部价格</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <ul class="conBox clearfix">
+        <li class="conItem">
+          <a href="#">
+            <div class="img">
+              <img src="http://img10.360buyimg.com/n7/jfs/t577/85/103283769/55548/3ecfcbf8/5461b6e1N70e46439.jpg" alt="">
+            </div>
+            <div class="desc">
+              <p>廿一客(21cake)专用餐具 1人份(不单独配送)</p>
+              <div class="bottom">
+                <div class="fl price">￥0.50</div>
+                <div class="fr goshop">去购买</div>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+   
+    
+
+    <!-- 底部 -->
+    <div class="footer">
+      <div class="footer_top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#top" class="totop">返回顶部</a>
+      </div>
+      <div class="footer_bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台--</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+
+   
+  </div>
+
+
+  
+  <!-- 渲染第一个下拉ul下拉框  模板-->
+  <script type="text/html" id="navList1_tpl">
+    {{each result v i}}
+     <li class="shopItem" data-shopid="{{v.shopId}}">{{v.shopName}}</li>
+    {{/each}}
+  </script>
+
+  <!-- 渲染第二个下拉ul下拉框  模板-->
+  <script type="text/html" id="navList2_tpl">
+    {{each result v i}}
+    <li class="areaItem" data-areaid="{{v.areaId}}">{{v.areaName}}</li>
+    {{/each}}
+  </script>
+  
+
+  <!-- 渲染商品区域  模板-->
+  <script type="text/html" id="conItem_tpl">
+    {{each result v i}}
+      <li class="conItem" data-productid="{{v.productId}}">
+        <a href="https://item.m.jd.com/ware/view.action?wareId=1274360">
+          <div class="img">
+            <img src="{{v.productImg}}" alt="">
+          </div>
+          <div class="desc">
+            <p>{{v.productName}}</p>
+            <div class="bottom">
+              <div class="fl price">{{v.productPrice}}</div>
+              <div class="fr goshop">去购买</div>
+            </div>
+          </div>
+        </a>
+      </li>
+    {{/each}}
+  </script>
+
+
+
+
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/gsproduct.js"></script>
+</body>
+
+</html>
