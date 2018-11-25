@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/baicaijia.css">
+  <title>白菜价</title>
+</head>
+
+<body>
+  <div class="mmb_container">
+
+    <!--  top 顶部栏 -->
+    <div class="top">
+      <a href="javascript:;" id="top" name="top"> </a>
+      <i class="back" onclick="javascript:history.back(-1)"> </i>
+      <h3>白菜价-淘宝内部优惠券</h3>
+      <div class="app">
+        <img src="./images/header_app.png" alt="">
+      </div>
+
+    </div>
+
+    <!-- 导航框 -->
+    <div class="bcjNav">
+      <ul class="navBox clearfix">
+
+        <!-- 挖坑 -->
+        <li class="navList active">
+          <a href="#">全部</a>
+        </li>
+        <li class="navList">
+          <a href="#">全部</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="bcjProduct">
+      <ul class="proBox">
+        <li class="proItem">
+          <a href="#">
+            <div class="img">
+              <img src="https://gd2.alicdn.com/imgextra/i2/2551982558/TB2H6XhamiJ.eBjSspiXXbqAFXa_!!2551982558.jpg_400x400.jpg" alt="">
+            </div>
+
+            <div class="desc">
+             
+              <div class="title">
+                <span class="b">[包邮]</span>双十一红包 今日开启
+              </div>
+              <div class="price">
+                <i></i>
+                <em>￥</em>
+                0.0
+                <del>￥0</del>
+              </div>
+
+              <div class="bar clearfix">
+                <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&sellerId=2246833798"></a>
+                <i>
+                  <em style="width:2%;"></em>
+                  <span>2%</span>
+                </i>
+                <b>已领112张</b>
+              </div>
+              <div class="couLink">
+                <a href="#" target="_blank">点此领10元优惠券</a>
+              </div>
+              <div class="shopLink">
+                <a href="#">下单链接</a>
+              </div>
+
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="footer">
+      <div class="footer_top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#top" class="totop">返回顶部</a>
+      </div>
+      <div class="footer_bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台--</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <!-- 渲染导航  模板 -->
+  <script type="text/html" id="nav_tpl">
+    {{each result v i }}
+      <li class="navList">
+        <a href="javascript:;" data-titleid="{{v.titleId}}">{{v.title}}</a>
+      </li>
+    {{/each}}
+  </script>
+
+
+  <script type="text/html" id="bjcPro_tpl">
+    {{each result v i}}
+      <li class="proItem">
+        <a href="#">
+          <div class="img">
+            {{@v.productImg}}  
+          </div>
+
+          <div class="desc">
+           
+            <div class="title">
+             {{@v.productName}}
+            </div>
+            <div class="price">
+              <i></i>
+              {{@v.productPrice}}
+            </div>
+
+            {{@v.productCouponRemain}}
+
+            <div class="couLink">
+              {{@v.productCoupon}}
+            </div>
+            <div class="shopLink">
+              {{@v.productHref}}
+            </div>
+
+          </div>
+        </a>
+      </li>
+    {{/each}}
+  </script>
+
+
+
+
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/IScroll/iscroll.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/baicaijia.js"></script>
+</body>
+
+</html>
