@@ -27,6 +27,8 @@
     <!--  商品并排内容 -->
     <div class="inlanddiscount">
       <ul class="discountBox">
+
+        <!-- 挖坑 -->
         <li class="discountItem">
           <a href="#">
             <div class="img">
@@ -87,6 +89,33 @@
 
 
   </div>
+
+
+  <!-- 渲染商品并排列表信息  模板 -->
+  <script type="text/html" id="inlanddiscount_tpl">
+    {{each result v i }}
+      <li class="discountItem">
+        <a href="discount.html?productid={{v.productId}}">
+          <div class="img">
+            {{@v.productImg}}
+          </div>
+          <div class="desc">
+            <p class="proname">{{v.productName}}</p>
+            <div class="bottom">
+              <p class="price">{{v.productPrice}}</p>
+              <p class="proTime">
+                <span>{{v.productFrom}}</span> |
+                <span>{{v.productTime}}</span>
+              </p>
+
+            </div>
+          </div>
+        </a>
+      </li>
+
+    {{ /each }}
+
+  </script>
 
 
  

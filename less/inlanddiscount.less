@@ -137,6 +137,10 @@ a:active{
             line-height: 18rem/@base;
             margin-bottom:5rem/@base;
             overflow: hidden;
+            // 控制文本多行溢出, 用...代替显示
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
           }
 
           .bottom{

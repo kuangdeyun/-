@@ -364,53 +364,119 @@ a:active {
 .footer .footer_bottom .col666 {
   color: #666;
 }
-.inlanddiscount .discountBox {
-  overflow: hidden;
-  margin-bottom: 0.8rem;
+.moneyproduct {
+  padding: 0.4rem 0.4rem 0 0.2rem;
 }
-.inlanddiscount .discountBox li.discountItem {
-  float: left;
-  width: 50%;
-  position: relative;
-  height: 5.3rem;
-  border-right: 0.02rem solid #cccccc;
-  border-bottom: 0.02rem solid #cccccc;
-  padding: 0.3rem 0.3rem 0.3rem 0.44rem;
-}
-.inlanddiscount .discountBox li.discountItem a .img img {
-  width: 2.8rem;
-  height: 2.8rem;
-}
-.inlanddiscount .discountBox li.discountItem a .desc p {
+.moneyproduct h3 {
+  line-height: 0.44rem;
+  font-size: 0.36rem;
+  font-weight: 700;
+  color: #5a5a5a;
   margin: 0;
 }
-.inlanddiscount .discountBox li.discountItem a .desc .proname {
-  font-size: 0.28rem;
-  font-weight: 700;
-  line-height: 0.36rem;
-  margin-bottom: 0.1rem;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-.inlanddiscount .discountBox li.discountItem a .desc .bottom {
-  position: absolute;
-  bottom: 0.44rem;
-  left: 0.44rem;
-}
-.inlanddiscount .discountBox li.discountItem a .desc .bottom .price {
-  color: #ff6c00;
-  font-size: 0.32rem;
-  height: 0.36rem;
-  line-height: 0.36rem;
-  margin-bottom: 0.2rem;
-  overflow: hidden;
-}
-.inlanddiscount .discountBox li.discountItem a .desc .bottom .proTime {
-  color: #a1a1a1;
+.moneyproduct .subtitle {
+  color: #999;
   font-size: 0.24rem;
+  margin: 0.4rem 0.1rem;
 }
-.inlanddiscount .discountBox li.discountItem:nth-child(2n) {
-  border-right: none;
+.moneyproduct .content img:first-child {
+  width: 2.4rem;
+  height: 2.04rem;
+  float: right;
+  display: block;
+}
+.moneyproduct .content p {
+  line-height: 0.48rem;
+  color: #606060;
+  font-size: 0.32rem;
+  margin: 0;
+}
+.moneyproduct .content img:last-child {
+  width: 4.8rem;
+  height: 4.8rem;
+  margin-top: 0.4rem;
+  display: block;
+}
+.extra {
+  padding: 0 0.2rem;
+}
+.extra .goLink {
+  height: 0.6rem;
+  background-color: #ff9000;
+  line-height: 0.6rem;
+  margin: 0 0.2rem 0.8rem;
+  color: #fff;
+  font-size: 0.28rem;
+  text-align: center;
+}
+.extra .wechatCode {
+  height: 3.12rem;
+  margin: 0.4rem 0;
+}
+.extra .cu-content-pl .tit {
+  font-size: 0.32rem;
+  padding: 0.12rem 0.16rem;
+}
+.extra .cu-content-pl .reply {
+  padding: 0.12rem 0.16rem;
+}
+.extra .cu-content-pl .reply .form {
+  height: 2.32rem;
+  border: 0.02rem solid #cccccc;
+  position: relative;
+}
+.extra .cu-content-pl .reply .form textarea {
+  width: 90%;
+  height: 1.36rem;
+  position: absolute;
+  top: 0.04rem;
+  left: 5%;
+}
+.extra .cu-content-pl .reply .form .ctrl input {
+  width: 2rem;
+  height: 0.72rem;
+  font-size: 0.32rem;
+  color: #ffffff;
+  border: 0.04rem solid #ff841d;
+  background-color: #ff841d;
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+}
+.extra .cu-content-pl .list .ui-border-b {
+  padding: 0.36rem 0.2rem;
+}
+.extra .cu-content-pl .list .ui-border-b .userimg {
+  float: left;
+}
+.extra .cu-content-pl .list .ui-border-b .userimg > img {
+  border-radius: 50%;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.extra .cu-content-pl .list .ui-border-b .con {
+  overflow: hidden;
+}
+.extra .cu-content-pl .list .ui-border-b .name {
+  font-size: 0.26rem;
+  margin-left: 0.2rem;
+}
+.extra .cu-content-pl .list .ui-border-b .name .username {
+  float: left;
+  color: #5997c0;
+}
+.extra .cu-content-pl .list .ui-border-b .name .time {
+  float: right;
+  color: #999999;
+}
+.extra .cu-content-pl .list .ui-border-b .content {
+  margin-left: 0.2rem;
+  float: left;
+  font-size: 0.3rem;
+  color: #606060;
+  line-height: 0.44rem;
+}
+.extra .cu-content-pl .list .ui-border-b .content > img {
+  width: 0.6rem;
+  heihgt: 0.6rem;
 }

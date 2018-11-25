@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/discount.css">
+  <title>discount</title>
+</head>
+
+<body>
+  <div class="mmb_container">
+
+    <!--  top 顶部栏 -->
+    <div class="top">
+      <a href="javascript:;" id="top" name="top"> </a>
+      <i class="back" onclick="javascript:history.back(-1)"> </i>
+      <h3>国内折扣</h3>
+      <div class="app">
+        <img src="./images/header_app.png" alt="">
+      </div>
+
+    </div>
+
+    <div class="moneyproduct">
+      <!-- 挖坑 -->
+      <h3>移动端凑单品：海天 鲜味 生抽 1.28L</h3>
+      <div class="subtitle">
+        <span>京东商城</span>
+        <span>10-25 12:31</span>
+        <span>小编烟火 / 慢慢买</span>
+      </div>
+
+      <div class="content">
+        <img src="http://img10.360buyimg.com/n7/jfs/t1720/256/513904188/195330/ce31e971/55d2cf3eNc2d117d0.jpg" alt="">
+        <p>原价25.9一斤，凑满5件只要99元价格。 枣子紧实，入口甜爽。适合公司人多的买吧，价格还是不错的。</p>
+        <img src="http://img10.360buyimg.com/n7/jfs/t1720/256/513904188/195330/ce31e971/55d2cf3eNc2d117d0.jpg" alt="">
+      </div>
+
+    </div>
+
+    <div class="extra">
+
+      <!-- 挖大坑 -->
+
+      <div class="goLink">前往购买</div>
+
+      <div class="wechatCode">
+        <img src="./images/mmbweixin2.png" alt="">
+      </div>
+
+      <div class="cu-content-pl ui-border-t">
+        <div class="tit">发表评论</div>
+        <div class="reply">
+          <div class="form">
+            <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
+            <input name="ctl00$ContentBody$lbl_fbr" id="ctl00_ContentBody_lbl_fbr" value="手机端网友58***74" type="hidden">
+            <input name="ctl00$ContentBody$hid_name" id="ctl00_ContentBody_hid_name" value="Apple iPhone 6 64GB 金色 移动联通电信4G手机" type="hidden">
+            <div class="ctrl">
+              <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp" type="submit">
+            </div>
+          </div>
+        </div>
+        <div class="tit" id="newcomment">
+          最新评论</div>
+        <div class="list">
+          <ul>
+
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <!-- 底部 -->
+    <div class="footer">
+      <div class="footer_top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#top" class="totop">返回顶部</a>
+      </div>
+      <div class="footer_bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台--</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <!-- 渲染商品详情  模板 -->
+  <script type="text/html" id="discountText_tpl">
+    {{ each result v i }}
+      <h3>{{v.productName}}</h3>
+      <div class="subtitle">
+        <span>{{v.productFrom}}</span>
+        <span>{{v.productTime}}</span>
+        <span>{{v.productTips}}</span>
+      </div>
+
+      <div class="content">
+        {{@v.productImg}}
+        <p>{{v.productInfo2}}</p>
+        <p>{{v.productInfo}}</p>
+        {{@v.productImg}}
+      </div>
+
+    {{ /each }}
+  </script>
+
+
+
+  <script type="text/html" id="extra_tpl">
+    {{each result v i }}
+     
+      <div class="goLink">前往购买</div>
+
+      <div class="wechatCode">
+        <img src="./images/mmbweixin2.png" alt="">
+      </div>
+      <div class="cu-content-pl ui-border-t">
+        {{@v.productComment}}
+      </div>
+   {{ /each }}
+
+
+  </script>
+
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/discount.js"></script>
+</body>
+
+</html>

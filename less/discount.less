@@ -1,0 +1,241 @@
+@import "base";
+@import "normalize";
+@import "vairable";
+@import "adapter";
+
+a:link,
+a:visited,
+a:hover,
+a:active{
+  color: #333;
+  text-decoration: none;
+}
+
+.mmb_container{
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.top{
+  height: 50rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1rem/@base solid @bdColor;
+  overflow: hidden;
+  position: relative;
+  padding: 0 48rem/@base;
+
+  .back{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 48rem/@base;
+    height: 48rem/@base;
+    padding: 12rem/@base;
+    background: url(../images/icback.svg) no-repeat;
+    background-size: 24rem/@base 24rem/@base;
+    background-clip: content-box;
+    background-origin: content-box;
+  }
+
+  h3{
+    height: 48rem/@base;
+    line-height: 48rem/@base;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18rem/@base;
+    color: #fff;
+    margin: 0;
+  }
+
+  .app{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48rem/@base;
+    height: 48rem/@base;
+    padding: 7rem/@base; 
+  }
+}
+
+
+.footer{
+  margin-top: 8rem/@base;
+
+  .footer_top{
+    border-top: 1rem/@base solid #c4c4c4;
+    border-bottom: 1rem/@base solid #c4c4c4;
+    overflow: hidden;
+    text-align: center;
+
+    a{
+      display: block;
+      float: left;
+      width: 33.3%;
+      height: 34rem/@base;
+      line-height: 34rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+    }
+    .totop{
+      border-right: none;
+    }
+  }
+
+  .footer_bottom{
+   height: 62rem/@base;
+   font-size: 12rem/@base;
+   text-align: center;
+   padding: 15rem/@base 0;
+
+   .downApp{
+
+    .colred{
+      color: red;
+    }
+   }
+   
+   .col666{
+     color: #666;
+   }
+
+  }
+}
+
+
+.moneyproduct{
+  padding: 20rem/@base 20rem/@base 0 10rem/@base;
+
+  h3{
+    line-height: 22rem/@base;
+    font-size: 18rem/@base;
+    font-weight: 700;
+    color: #5a5a5a;
+    margin: 0;
+  }
+
+  .subtitle{
+    color: #999;
+    font-size: 12rem/@base;
+    margin: 20rem/@base 5rem/@base;;
+  }
+
+  .content{
+    img:first-child{
+      width: 120rem/@base;
+      height: 102rem/@base;
+      float: right;
+      display: block;
+    }
+    p{
+      line-height: 24rem/@base;
+      color: #606060;
+      font-size: 16rem/@base;
+      margin: 0;
+    }
+    img:last-child{
+      width: 240rem/@base;
+      height: 240rem/@base;
+      margin-top: 20rem/@base;
+      display: block;
+    }
+  }
+}
+
+.extra{
+  padding: 0 10rem/@base;
+
+  
+  .goLink{
+    height: 30rem/@base;
+    background-color: #ff9000;
+    line-height: 30rem/@base;
+    margin: 0 10rem/@base 40rem/@base;
+    color: #fff;
+    font-size: 14rem/@base;
+    text-align: center;
+  }
+
+  .wechatCode{
+    height: 156rem/@base;
+    margin: 20rem/@base 0;
+  }
+
+  .cu-content-pl {
+    .tit {
+      font-size: 16rem/@base;
+      padding: 6rem/@base 8rem/@base;
+    }
+    .reply {
+      padding: 6rem/@base 8rem/@base;
+      .form {
+        height: 116rem/@base;
+        border: 1rem/@base solid #ccc;
+        position: relative;
+        textarea {
+          width: 90%;
+          height: 68rem/@base;
+          position: absolute;
+          top: 2rem/@base;
+          left: 5%;
+        }
+        .ctrl input{
+          width: 100rem/@base;
+          height: 36rem/@base;
+          font-size: 16rem/@base;
+          color: #ffffff;
+          border: 2rem/@base solid #ff841d;
+          background-color: #ff841d;
+          position: absolute;
+          bottom: 0rem/@base;
+          right: 0rem/@base;
+        }
+      }
+    }
+    .list {
+      .ui-border-b {
+        //height: 79rem/@base;
+        padding: 18rem/@base 10rem/@base;
+        .userimg  {
+          float: left;
+          >img{
+            border-radius: 50%;
+            width: 40rem/@base;
+            height: 40rem/@base;
+          }
+
+        }
+        .con {
+          overflow: hidden;
+        }
+        .name {
+
+          font-size: 13rem/@base;
+          margin-left: 10rem/@base;
+          .username {
+            float: left;
+            color: #5997c0;
+          }
+          .time {
+            float: right;
+            color: #999999;
+          }
+
+        }
+        .content {
+          margin-left: 10rem/@base;
+          float: left;
+          font-size: 15rem/@base;
+          color: #606060;
+          line-height: 22rem/@base;
+          >img {
+            width: 30rem/@base;
+            heihgt: 30rem/@base;
+          }
+        }
+      }
+    }
+  }
+}
