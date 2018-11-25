@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="./css/moneyproduct.css">
-  <title>省钱控</title>
+  <title>moneyproduct</title>
 </head>
 
 <body>
@@ -25,6 +25,7 @@
     </div>
 
     <div class="moneyproduct">
+      <!-- 挖坑 -->
       <h3>移动端凑单品：海天 鲜味 生抽 1.28L</h3>
       <div class="subtitle">
         <span>京东商城</span>
@@ -328,39 +329,39 @@
   </div>
 
 
-  <script type="text/html" id="moneyctrl_tpl">
-    {{ each result v i}}
-      <li class="content_item">
-        <a href="moneyproduct.html?productid={{v.productId}}">
-          <div class="item_img">
-            {{@v.productImgSm}}
-          </div>
-          <div class="item_desc">
-            <div class="desc_top">
-              <span>{{v.productName}}</span>
-              <span class="colff6c00">{{v.productPinkage}}</span>
-            </div>
-            <div class="desc_bottom">
-              <span class="fl">{{v.productFrom}} | {{v.productTime}}</span>
-              <span class="fr">{{v.productComCount}}</span>
-            </div>
-          </div>
-        </a>
-      </li>
+  <!-- 渲染商品详情  模板 -->
+  <script type="text/html" id="proText_tpl">
+    {{ each result v i }}
+      <h3>{{v.productName}}</h3>
+      <div class="subtitle">
+        <span>{{v.productFrom}}</span>
+        <span>{{v.productTime}}</span>
+        <span>{{v.productTips}}</span>
+      </div>
+
+      <div class="content">
+        {{@v.productImgSm}}
+        <p>{{v.productInfo2}}</p>
+        <p>{{v.productInfo}}</p>
+        {{@v.productImg2}}
+      </div>
 
     {{ /each }}
-  
   </script>
 
 
-  <script type="text/html" id="pageCount_tpl">
-    
-    <%for(i = 0; i < pageCount; i ++) {%>
-      <li>
-        <%=i+1%>/
-          <%=pageCount%>
-      </li>
-      <%}%>
+
+  <script type="text/html" id="extra_tpl">
+    {{each result v i }}
+      {{@v.productCity}}
+      <div class="goLink">前往购买</div>
+
+      <div class="wechatCode">
+        <img src="./images/mmbweixin2.png" alt="">
+      </div>
+
+      {{@v.productComment}}
+   {{ /each }}
 
 
   </script>

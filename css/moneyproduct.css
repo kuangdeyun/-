@@ -507,3 +507,7 @@ a:active {
   color: #606060;
   line-height: 0.44rem;
 }
+.extra .cu-content-pl .list li .con .content img {
+  float: left;
+  width: 22px;
+}
