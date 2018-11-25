@@ -1,0 +1,169 @@
+@import "base";
+@import "normalize";
+@import "vairable";
+@import "adapter";
+
+a:link,
+a:visited,
+a:hover,
+a:active{
+  color: #333;
+  text-decoration: none;
+}
+
+.mmb_container{
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.top{
+  height: 50rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1rem/@base solid @bdColor;
+  overflow: hidden;
+  position: relative;
+  padding: 0 48rem/@base;
+
+  .back{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 48rem/@base;
+    height: 48rem/@base;
+    padding: 12rem/@base;
+    background: url(../images/icback.svg) no-repeat;
+    background-size: 24rem/@base 24rem/@base;
+    background-clip: content-box;
+    background-origin: content-box;
+  }
+
+  h3{
+    height: 48rem/@base;
+    line-height: 48rem/@base;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18rem/@base;
+    color: #fff;
+    margin: 0;
+  }
+
+  .app{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48rem/@base;
+    height: 48rem/@base;
+    padding: 7rem/@base; 
+  }
+}
+
+
+.footer{
+  margin-top: 8rem/@base;
+
+  .footer_top{
+    border-top: 1rem/@base solid #c4c4c4;
+    border-bottom: 1rem/@base solid #c4c4c4;
+    overflow: hidden;
+    text-align: center;
+
+    a{
+      display: block;
+      float: left;
+      width: 33.3%;
+      height: 34rem/@base;
+      line-height: 34rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+    }
+    .totop{
+      border-right: none;
+    }
+  }
+
+  .footer_bottom{
+   height: 62rem/@base;
+   font-size: 12rem/@base;
+   text-align: center;
+   padding: 15rem/@base 0;
+
+   .downApp{
+
+    .colred{
+      color: red;
+    }
+   }
+   
+   .col666{
+     color: #666;
+   }
+
+  }
+}
+
+
+.inlanddiscount{
+  .discountBox{
+    overflow: hidden;
+    margin-bottom: 40rem/@base;
+
+    li.discountItem{
+      float: left;
+      width: 50%;
+      position: relative;
+      height: 265rem/@base;
+      border-right: 1rem/@base solid #ccc;
+      border-bottom: 1rem/@base solid #ccc;
+      padding: 15rem/@base 15rem/@base 15rem/@base 22rem/@base;
+      a{
+
+        .img{
+          img{
+            width: 140rem/@base;
+            height: 140rem/@base;
+          }
+        }
+
+        .desc{
+          p{
+            margin: 0;
+          }
+          .proname{
+            font-size: 14rem/@base;
+            font-weight: 700;
+            line-height: 18rem/@base;
+            margin-bottom:5rem/@base;
+            overflow: hidden;
+          }
+
+          .bottom{
+            position: absolute;
+            bottom: 22rem/@base;
+            left: 22rem/@base;
+
+            .price{
+              color: #ff6c00;
+              font-size: 16rem/@base;
+              height: 18rem/@base;
+              line-height: 18rem/@base;
+              margin-bottom: 10rem/@base;
+              overflow: hidden;
+            }
+
+            .proTime{
+              color: #a1a1a1;
+              font-size: 12rem/@base;
+            }
+          }
+        }
+      }
+    }
+
+    li.discountItem:nth-child(2n){
+      border-right: none;
+    }
+  }
+}
