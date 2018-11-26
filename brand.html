@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/brand.css">
+  <title>brand</title>
+</head>
+<body>
+  <div class="mmb_container">
+
+    <!--  top 顶部栏 -->
+    <div class="top">
+      <div class="logo">
+        <a href="index.html">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="app">
+        <img src="./images/header_app.png" alt="">
+      </div>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="search">
+      <div class="input">
+        <input type="search" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="button">
+        <input type="button" value="搜索">
+      </div>
+    </div>
+
+    <!-- 头部二级导航 -->
+    <div class="titleNav">
+        <div class="three_nav">
+            <!-- 挖坑 -->
+            <a href="index.html">首页</a>
+            <span>></span>
+            <a href="brandTitle.html">全部分类</a>
+            <span>></span>     
+        </div>
+           
+       
+    </div>
+
+    <!-- 哪个牌子好 -->
+    <div class="good">
+      平板电视哪个牌子好
+    </div>
+    <!-- 商品品牌列表 -->
+    <div class="tenHot">
+      <ul class="hotBox">
+        <!-- 挖个坑 -->
+        <li class="hotItem">
+          <a href="#">
+            <div class="rank">1</div>
+            <div class="desc">
+              <p>三星平板电视</p>
+              <p>30天全网销售：242408件</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+     <!-- 销量排行 -->
+     <div class="sell">
+        平板电视产品销量排行
+      </div>
+      <!-- 销量排行列表 -->
+      <div class="sellList">
+        <ul class="sellBox clearfix">
+          <!-- 挖个坑 -->
+          <li class="sellItem">
+            <a href="#">
+              <div class="img">
+                <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg" alt="">
+              </div>
+              <div class="desc">
+                <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+                <div class="center">
+                  <span class="fl price">￥3266.00</span>
+                  <span class="fr star"></span>
+                </div>
+                <div class="bottom">
+                  <span class="fl">报价(6)</span>
+                  <span class="fl">评论(3522)</span>
+                </div>
+              </div>
+           </a>
+          </li>
+        </ul>
+      </div>
+
+
+       <!-- 评论区域 -->
+     <div class="comment">
+        平板电视最新评论
+      </div>
+      <!-- 评论列表 -->
+      <div class="commentList">
+        <ul class="commentBox clearfix">
+          <!-- 挖个坑 -->
+          <li class="commentItem">
+            <div class="comtop">
+                <div class="img">
+                  <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg" alt="">
+                </div>
+                <div class="desc">
+                  <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+                </div>
+            </div>
+
+            <div class="comCon">
+              <div class="comHeader">
+                <span>b***r</span>
+                <span class="star"></span>
+                <span class="fr time">2016/10/1</span>
+              </div>
+
+              <div class="comtext">
+                  使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线
+              </div>
+            </div>         
+          </li>
+        </ul>
+      </div>
+
+
+
+    <!-- 底部 -->
+    <div class="footer">
+      <div class="footer_top">
+          <a href="#">登录</a>
+          <a href="#">注册</a>
+          <a href="#" class="totop">返回顶部</a>
+      </div>
+      <div class="footer_bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台--</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+  <!-- 渲染各十大品牌 模板 -->
+  <script type="text/html" id="tenHotItem_tpl">
+    {{each result v i}}
+      <li class="hotItem">
+        <a href="#">
+          <div class="rank">{{i+1}}</div>
+          <div class="desc">
+            <p>{{v.brandName}}</p>
+            <p>{{v.brandInfo}}</p>
+          </div>
+        </a>
+      </li>
+    {{/each}}
+  
+  </script>
+
+
+  <!-- // 渲染品牌id对应的商品列表 -->
+  <script type="text/html" id="sellList_tpl">
+    {{each result v i}}
+      <li class="sellItem">
+        <a href="bijia.html" data-productid="{{v.productId}}">
+          <div class="img">
+            {{@v.productImg}}
+          </div>
+          <div class="desc">
+            <p>{{v.productName}}</p>
+            <div class="center">
+              <span class="fl price">{{v.productPrice}}</span>
+              <span class="fr star"></span>
+            </div>
+            <div class="bottom">
+              <span class="fl">{{v.productQuote}}</span>
+              <span class="fl">{{v.productCom}}</span>
+            </div>
+          </div>
+        </a>
+      </li>
+    {{/each}}
+  </script>
+
+
+  <!-- 渲染评论  模板 -->
+  <script type="text/html" id="commentList_tpl">
+    {{each result v i}}
+    <li class="commentItem">
+        <div class="comtop">
+            <div class="img">
+              <img src="./images/tv.png" alt="">
+            </div>
+            <div class="desc">
+              <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+            </div>
+        </div>
+
+        <div class="comCon">
+          <div class="comHeader">
+            <span>{{v.comName}}</span>
+            <span class="star"></span>
+            <span class="fr time">{{v.comTime}}</span>
+          </div>
+
+          <div class="comtext">
+             {{v.comContent}}
+          </div>
+        </div>         
+      </li>
+    {{/each}}
+  </script>
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/brand.js"></script>
+</body>
+</html>

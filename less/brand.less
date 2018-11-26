@@ -1,0 +1,378 @@
+@import "base";
+@import "normalize";
+@import "vairable";
+@import "adapter";
+
+
+.mmb_container{
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.top{
+  height: 50rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1rem/@base solid @bdColor;
+  overflow: hidden;
+
+  .logo{
+    float: left;
+    padding: 12rem/@base;
+    img{
+      width: auto;   //表示宽度是可变的，浏览器会自动计算其宽度；
+      height: 25rem/@base;
+    }
+  }
+
+  .app{
+    float: right;
+    width: 48rem/@base;
+    height: 48rem/@base;
+    padding: 7rem/@base; 
+  }
+}
+
+
+.search{
+  width: 100%;
+  height: 50rem/@base;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  // margin-bottom: 10rem/@base;
+
+  .input{
+    overflow: hidden;
+    margin: 10rem/@base;
+    height: 30rem/@base;
+    padding-right: 73rem/@base;
+
+    input{
+      width: 100%;
+      height: 30rem/@base;
+      line-height: 30rem/@base;
+      background-color: #f1f1f1;
+      border-radius: 15rem/@base;
+      text-indent: 20rem/@base;   //文字缩进
+      font-size: 14rem/@base;
+    }
+   
+  }
+
+  .button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 63rem/@base;
+    height: 30rem/@base;
+    margin: 10rem/@base;
+
+    input{
+      width: 100%;
+      height: 100%;
+      line-height: 30rem/@base;
+      border: none;
+      border-radius: 15rem/@base;
+      background-color: @mainColor;
+      text-align: center;
+      font-size: 16rem/@base;
+      color: #fff;
+      outline-style: none;  //去除点击时出现的外边框
+    }
+  }
+}
+
+.footer{
+  margin-top: 20rem/@base;
+
+  .footer_top{
+    border-top: 1rem/@base solid #c4c4c4;
+    border-bottom: 1rem/@base solid #c4c4c4;
+    overflow: hidden;
+    text-align: center;
+
+    a{
+      display: block;
+      float: left;
+      width: 33.3%;
+      height: 34rem/@base;
+      line-height: 34rem/@base;
+      border-right: 1rem/@base solid #c4c4c4;
+    }
+    .totop{
+      border-right: none;
+    }
+  }
+
+  .footer_bottom{
+   height: 62rem/@base;
+   font-size: 12rem/@base;
+   text-align: center;
+   padding: 15rem/@base 0;
+
+   .downApp{
+
+    .colred{
+      color: red;
+    }
+   }
+   
+   .col666{
+     color: #666;
+   }
+
+  }
+}
+
+.titleNav{
+  width: 100%;
+  height: 38rem/@base;
+  background-image: linear-gradient(to bottom, #fff, #ebebeb);
+  position: relative;line-height: 38rem/@base;
+  padding-left: 10rem/@base; 
+  border-top: 1rem/@base solid #ebebeb;
+  border-bottom: 1rem/@base solid #ccc;
+  font-size: 14rem/@base;
+  
+}
+
+.good{
+  height: 38rem/@base;
+  line-height: 38rem/@base;
+  background-color: #eee;
+  border-bottom: 1rem/@base solid #ccc;
+  color: #874604;
+  font-size: 14rem/@base;
+  padding: 0 10rem/@base;
+}
+
+
+.tenHot{
+  .hotBox{
+
+    li.hotItem{
+      height: 73rem/@base;
+      border-bottom: 1rem/@base solid #ccc;
+      padding: 11rem/@base;
+      background: url("http://www.zuyushop.com/wap/images/arrow1.gif") right center no-repeat;
+
+      a{
+        .rank{
+          width: 20rem/@base;
+          height: 20rem/@base;
+          text-align: center;
+          line-height: 20rem/@base;
+          color: #fff;
+          float: left;
+          background-color: #999;
+        }
+
+        .desc{
+          float: left;
+          margin-top: 1rem/@base;
+          margin-left: 10rem/@base; 
+
+          p:first-child{
+            color: #000;
+            font-size: 16rem/@base;
+          }
+
+          p:last-child{
+            font-size: 12rem/@base;
+            color: #999;
+            margin-top: 5rem/@base;
+          }
+        }
+      }
+    }
+
+    li:nth-child(1) a .rank{
+      background-color: red;
+    }
+
+    li:nth-child(2) a .rank{
+      background-color: orange;
+    }
+
+    li:nth-child(3) a .rank{
+      background-color: greenyellow;
+    }
+  }
+
+}
+
+
+.sell{
+  height: 38rem/@base;
+  line-height: 38rem/@base;
+  background-color: #eee;
+  border-bottom: 1rem/@base solid #ccc;
+  color: #874604;
+  font-size: 14rem/@base;
+  padding: 0 10rem/@base;
+}
+
+.sellList{
+  .sellBox{
+    li.sellItem{
+        height: 130rem/@base;
+        border-bottom: 1rem/@base solid #ccc;
+        padding: 15rem/@base;
+      .img{
+        float: left;
+        img{
+          width: 100rem/@base;
+          height: 100rem/@base;
+          margin-right: 10rem/@base;
+        }
+      }
+
+      .desc{
+        height:95rem/@base ;
+        overflow: hidden;
+        position: relative;
+
+        >p{
+          font-size: 14rem/@base;
+          color: #333;
+          line-height: 22rem/@base;
+          // 断行
+          word-break: break-all;
+        }
+          .center{
+            position: absolute;
+            bottom: 20rem/@base;
+            left: 0;
+            width: 100%;
+
+            .price{
+              font-size: 18rem/@base;
+              color: #ea3900;
+            }
+
+            .star{
+              display: inline-block;
+              width: 100rem/@base;
+              height: 20rem/@base;
+              background: url(../images/star.svg) ;
+              background-size: 20rem/@base 20rem/@base;
+              background-repeat: repeat-x;
+            }
+          }
+
+          .bottom{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #a1a1a1;
+            font-size: 12rem/@base;
+
+            span{
+              margin-right: 10rem/@base;
+            }
+          }
+        
+      }
+    }
+  }
+}
+
+
+.comment{
+  height: 38rem/@base;
+  line-height: 38rem/@base;
+  background-color: #eee;
+  border-bottom: 1rem/@base solid #ccc;
+  color: #874604;
+  font-size: 14rem/@base;
+  padding: 0 10rem/@base;
+}
+
+.commentList{
+  .commentBox{
+    li.commentItem{
+        border-bottom: 1rem/@base solid #ccc;
+        padding: 15rem/@base;
+
+        .comtop{
+          overflow: hidden;
+          margin-bottom: 10rem/@base;
+
+          .img{
+            float: left;
+            img{
+              width: 100rem/@base;
+              height: 100rem/@base;
+              margin-right: 10rem/@base;
+            }
+          }
+    
+          .desc{
+            height:95rem/@base ;
+            overflow: hidden;
+            position: relative;
+    
+            >p{
+              font-size: 14rem/@base;
+              color: #a1a1a1;
+              line-height: 22rem/@base;
+              // 断行
+              word-break: break-all;
+            }
+      
+          }
+
+        }   
+
+        .comCon{
+          background-color: #f8f8f8;
+          border: 1rem/@base solid #ccc;
+          padding: 15rem/@base;
+          position: relative;
+
+          .comHeader{
+            height: 19rem/@base;
+            line-height: 19rem/@base;
+            font-size: 14rem/@base;
+            color: #4f6900;
+
+            .star{
+              display: inline-block;
+              width: 100rem/@base;
+              height: 20rem/@base;
+              background: url(../images/star.svg) ;
+              background-size: 20rem/@base 20rem/@base;
+              background-repeat: repeat-x;
+            }
+
+            .time{
+              color: #999;
+            }
+          }
+
+          .comtext{
+            margin-top: 10rem/@base;
+            line-height: 22rem/@base;
+            font-size: 15rem/@base;
+            word-break: break-all;
+          }
+        }
+
+        .comCon:before{
+          content: '';
+          width: 0;
+          height: 0;
+          position: absolute;
+          left: 29rem/@base;
+          top: -9rem/@base;
+          border-bottom: 9rem/@base solid #ccc;
+          border-left: 9rem/@base solid transparent;
+          border-right: 9rem/@base solid transparent;
+        }
+        
+    }
+  }
+}
