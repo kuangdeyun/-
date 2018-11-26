@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/sitenav.css">
+  <title>商城导航</title>
+</head>
+
+<body>
+  <div class="mmb_container">
+
+    <!--  top 顶部栏 -->
+    <div class="top">
+      <a href="javascript:;" id="top" name="top"> </a>
+      <i class="back" onclick="javascript:history.back(-1)"> </i>
+      <h3>商城导航</h3>
+      <div class="app">
+        <img src="./images/header_app.png" alt="">
+      </div>
+
+    </div>
+
+    <!-- 导航列表 -->
+    <div class="sitenav">
+      <ul class="navBox clearfix">
+        <!-- 挖坑 -->
+        <li class="navItem">
+          <a href="#">
+            <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt="">
+            <p>京东商城</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  
+   
+    
+
+    <!-- 底部 -->
+    <div class="footer">
+      <div class="footer_top">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#top" class="totop">返回顶部</a>
+      </div>
+      <div class="footer_bottom">
+        <p class="downApp">
+          <a href="#" class="colred">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          <a href="#" class="col666">--掌上比价平台--</a>
+        </p>
+        <p class="col666">m.manmanbuy.com</p>
+      </div>
+    </div>
+
+   
+  </div>
+
+
+  <script type="text/html" id="sitenav_tpl">
+    {{each result v i}}
+      <li class="navItem">
+        <a href="{{v.navHref}}">
+          <img src="{{v.navImg}}" alt="">
+          <p>{{v.navTitle}}</p>
+        </a>
+      </li>
+    {{/each}}
+  </script>
+
+
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/sitenav.js"></script>
+</body>
+
+</html>
